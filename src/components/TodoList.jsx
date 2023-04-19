@@ -8,7 +8,7 @@ function TodoList({ todo, id, isCompleted, setTodos }) {
 
   const editSubmit = async () => {
     await axios.put(
-      `https://pre-onboarding-selection-task.shop/todos/${id}`,
+      `https://www.pre-onboarding-selection-task.shop/todos/${id}`,
       {
         todo: editText,
         isCompleted: completed,
@@ -21,7 +21,7 @@ function TodoList({ todo, id, isCompleted, setTodos }) {
     );
 
     await axios
-      .get("https://pre-onboarding-selection-task.shop/todos", {
+      .get("https://www.pre-onboarding-selection-task.shop/todos", {
         headers: {
           authorization: `bearer ${localStorage.getItem("access_token")}`,
         },
@@ -34,7 +34,7 @@ function TodoList({ todo, id, isCompleted, setTodos }) {
 
   const deleteSubmit = async () => {
     await axios.delete(
-      `https://pre-onboarding-selection-task.shop/todos/${id}`,
+      `https://www.pre-onboarding-selection-task.shop/todos/${id}`,
       {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("access_token")}`,
@@ -43,7 +43,7 @@ function TodoList({ todo, id, isCompleted, setTodos }) {
     );
 
     await axios
-      .get("https://pre-onboarding-selection-task.shop/todos", {
+      .get("https://www.pre-onboarding-selection-task.shop/todos", {
         headers: {
           authorization: `bearer ${localStorage.getItem("access_token")}`,
         },

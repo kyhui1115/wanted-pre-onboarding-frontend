@@ -33,7 +33,7 @@ function SigninPage() {
   const signinHandler = (e) => {
     e.preventDefault();
     axios
-      .post("https://pre-onboarding-selection-task.shop/auth/signup", {
+      .post("https://www.pre-onboarding-selection-task.shop/auth/signup", {
         email: loginInfo.email,
         password: loginInfo.password,
       })
@@ -42,7 +42,7 @@ function SigninPage() {
           navigate("/signin");
         }
       })
-      .catch((err) => console.log(err));
+      .catch((err) => alert(err.response.data.message));
   };
 
   useEffect(() => {

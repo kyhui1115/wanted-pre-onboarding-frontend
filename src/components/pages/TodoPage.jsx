@@ -17,7 +17,7 @@ function TodoPage() {
 
   const todoSubmit = async () => {
     await axios.post(
-      "https://pre-onboarding-selection-task.shop/todos",
+      "https://www.pre-onboarding-selection-task.shop/todos",
       { todo: text },
       {
         headers: {
@@ -26,7 +26,7 @@ function TodoPage() {
       }
     );
     axios
-      .get("https://pre-onboarding-selection-task.shop/todos", {
+      .get("https://www.pre-onboarding-selection-task.shop/todos", {
         headers: {
           authorization: `bearer ${localStorage.getItem("access_token")}`,
         },
@@ -38,7 +38,7 @@ function TodoPage() {
 
   useEffect(() => {
     axios
-      .get("https://pre-onboarding-selection-task.shop/todos", {
+      .get("https://www.pre-onboarding-selection-task.shop/todos", {
         headers: {
           authorization: `bearer ${localStorage.getItem("access_token")}`,
         },

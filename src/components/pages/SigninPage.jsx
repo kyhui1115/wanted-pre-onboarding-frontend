@@ -39,7 +39,7 @@ function SigninPage() {
   const loginHandler = async (e) => {
     e.preventDefault();
     await axios
-      .post("https://pre-onboarding-selection-task.shop/auth/signin", {
+      .post("https://www.pre-onboarding-selection-task.shop/auth/signin", {
         email: loginInfo.email,
         password: loginInfo.password,
       })

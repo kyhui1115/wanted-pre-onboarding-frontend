@@ -8,12 +8,12 @@ import TodoPage from "./components/pages/TodoPage";
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/signup" element={<SignupPage />} />
-          <Route path="/signin" element={<SigninPage />} />
-          <Route path="/todo" element={<TodoPage />} />
+          <Route path="signup" element={<SignupPage />} />
+          <Route path="signin" element={<SigninPage />} />
+          <Route path="todo" element={<TodoPage />} />
         </Routes>
       </BrowserRouter>
     </div>
